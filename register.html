@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to Cyber Bunny </title>
+
+    <style>
+
+        /* Reset some basic styles */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family: Arial, sans-serif;
+
+        }
+
+
+
+        /* Body background and center alignment */
+
+        body {
+
+            background: linear-gradient(to bottom, #000000, #3a2a6a);
+
+            color: #ffffff;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            height: 100vh;
+
+            padding: 0 10px;
+
+        }
+
+
+
+        /* Navbar styling */
+
+        .navbar {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            width: 100%;
+
+            max-width: 600px;
+
+            padding: 20px 0;
+
+        }
+
+
+
+        .navbar .left h1 {
+
+            font-size: 1rem;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .navbar .left p {
+
+            margin-left: 5px;
+
+            font-size: 0.8rem;
+
+        }
+
+
+
+        .navbar .center a,
+
+        .navbar .right a {
+
+            color: #ffffff;
+
+            margin: 0 5px;
+
+            text-decoration: none;
+
+            font-size: 0.9rem;
+
+        }
+
+
+
+        .navbar .right a {
+
+            background: linear-gradient(to right, #b657ff, #d17aff);
+
+            padding: 5px 10px;
+
+            border-radius: 20px;
+
+            font-weight: bold;
+
+            font-size: 0.9rem;
+
+        }
+
+
+
+        /* Content styling */
+
+        .content {
+
+            text-align: center;
+
+            padding: 20px 0;
+
+        }
+
+
+
+        .content h2 {
+
+            font-size: 1.5rem;
+
+            font-weight: normal;
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+        .content h1 {
+
+            font-size: 2.5rem;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        /* Button styling */
+
+        .content .next-button {
+
+            padding: 10px 20px;
+
+            border: none;
+
+            border-radius: 20px;
+
+            font-size: 1rem;
+
+            font-weight: bold;
+
+            color: #ffffff;
+
+            background: linear-gradient(to right, #d17aff, #b657ff);
+
+            cursor: pointer;
+
+        }
+
+        i.fas.fa-envelope {
+
+    font-size: 20px; /* Adjust size */
+
+    color: #ffffff;  /* Change color */
+
+        }
+
+
+
+        /* Footer styling */
+
+        .footer {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            width: 100%;
+
+            max-width: 600px;
+
+            padding: 20px 0;
+
+            font-size: 0.8rem;
+
+            text-align: center;
+
+        }
+form{
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.social{
+  margin-top: 30px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color: #eaf0fb;
+  text-align: center;
+}
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+}
+        /* Mobile Styles */
+/* Existing CSS above */
+
+/* --- Mobile Styles --- */
+@media screen and (max-width: 600px) {
+    .background {
+        /* Make background slightly larger than form, use percentage */
+        width: 95%;
+        /* Allow height to adjust if needed, or keep fixed if desired */
+        /* height: auto;  /* Option */
+        /* Or adjust fixed height slightly if preferred */
+         height: 550px; /* Increase slightly to accommodate stacked buttons maybe */
+    }
+
+    form {
+        /* Use percentage width, but don't exceed original max */
+        width: 90%;
+        margin-top:30px;
+        max-width: 350px; /* Keep max width */
+        /* Let content determine height */
+        height: auto;
+        /* Reduce padding */
+        padding: 30px 15px; /* Example: Reduced padding */
+    }
+
+    form h3 {
+        /* Optionally reduce font size slightly */
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    label {
+         margin-top: 25px; /* Slightly reduce margin */
+    }
+
+    input {
+        height: 45px; /* Slightly reduce height */
+    }
+
+    button {
+         margin-top: 40px; /* Slightly reduce margin */
+         padding: 12px 0; /* Slightly reduce padding */
+         font-size: 16px; /* Slightly reduce font size */
+    }
+
+    .social {
+        /* Stack the items vertically */
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        margin-top: 25px; /* Adjust margin */
+    }
+
+    .social div {
+        /* Make buttons take up more width */
+        width: 90%; /* Or width: 100%; */
+        margin-bottom: 15px; /* Add space between stacked buttons */
+        text-align: center; /* Ensure text is centered */
+    }
+
+    .social div:last-child {
+         margin-bottom: 0; /* Remove margin from the last button */
+    }
+
+    .social .fb {
+        /* Remove the left margin needed for side-by-side */
+        margin-left: 0;
+    }
+}
+
+/* Optional: Add styles for very small screens if needed */
+@media screen and (max-width: 360px) {
+    form {
+        padding: 30px 15px; /* Even less padding */
+    }
+    form h3 {
+        font-size: 24px;
+    }
+    /* Further adjustments if necessary */
+}
+        @media (max-width: 600px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+
+
+            .navbar .center {
+
+                margin: 30px 0;
+
+            }
+
+
+
+            .content h2 {
+
+                font-size: 1.2rem;
+
+            }
+
+
+
+            .content h1 {
+
+                font-size: 2rem;
+
+            }
+
+
+
+            .footer {
+
+                flex-direction: column;
+
+                gap: 5px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="navbar">
+
+        <div class="left">
+
+        </div>
+
+        <div class="center">
+
+            <a href="index.html">Home</a>
+
+            <a href="#">About</a>
+
+            <a href="#">Content</a>
+
+            <a href="#">Others</a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Main Content -->
+
+    <div class="content">
+       <form>
+        <h3>Register Here</h3>
+           <br>
+       <input type="text" placeholder="Enter Your Name" id="username">
+       <input type="email" placeholder="Email" id="email">
+       <input type="password" placeholder="Password" id="password">
+       <input type="password" placeholder="Confirm Password" id="confirm_password">
+     
+
+        <button>Register</button>
+        <div class="social">
+          <div class="go"><i class="fab fa-google"></i>  Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div>
+           <br>
+           <p>Already register? <a href="login.html">Login</a></p>
+    </form>
+        
+    </div>
+
+
+
+    <!-- Footer -->
+
+    <div class="footer">
+
+        <i class="fas fa-envelope"></i>
+
+        <p>cdbunny89@gmail.com</p>
+
+    </div>
+    
+
+</body>
+
+</html>
